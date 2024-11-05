@@ -14,6 +14,9 @@ COPY ./pom.xml /root
 
 EXPOSE 8761
 
+# DAR PERMISOS DE EJECUCIÓN AL SCRIPT mvnw
+RUN chmod +x /root/mvnw
+
 # DESCARGAR LAS DEPENDENCIAS
 RUN ./mvnw dependency:go-offline
 
